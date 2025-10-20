@@ -1,12 +1,12 @@
 void main(List<String> args) {
-  // terrainDeJeuVariables();
-  // variableNonType();
-  // interpolationDeType();
-  variablesImmuables();
+  terrainDeJeuVariables();
 }
 
 void terrainDeJeuVariables() {
   typesDeBase();
+  variableNonType();
+  interpolationDeType();
+  variablesImmuables();
 }
 
 void typesDeBase() {
@@ -65,7 +65,7 @@ void variablesImmuables() {
   final interpolatedInteger;
   final interpolatedDouble;
   // l'initialisation se fait une seul fois apres cout
-  interpolatedInteger = 12346;
+  interpolatedInteger = 12345;
   interpolatedDouble = 1234.45;
 
   print(interpolatedInteger);
