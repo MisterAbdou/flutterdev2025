@@ -6,6 +6,7 @@ void terrainDeJeuChainesDeCaractere() {
   basicStringDeclaration();
   multiLineString();
   concatenationTraditionnelle();
+  modernInterpolation();
 }
 
 void basicStringDeclaration() {
@@ -34,11 +35,24 @@ void multiLineString() {
   print(abdouNdiaye);
 }
 
-//interploation de chaine de caracteres
+//concatenation des chaines de caracteres: ancien methode(+) et nouvelle methode(interpolation)
 void concatenationTraditionnelle() {
   final hello = "hello";
   final world = "world !";
   // l'operation + permet de faire la concatenation des chaines de caracteres
   final chainesCombines = hello + ' ' + world;
   print(chainesCombines);
+}
+
+//interpolation des chaines de caracteres
+void modernInterpolation() {
+  final annee = 2011;
+  //le caractere $ permet de donner le nom d'une variable dans une chaine de caracteres
+  final interpolated = "Dart a ete cree en $annee";
+  print(interpolated);
+
+  final age = 20;
+  // avec la combinaison de caracteres ${}
+  final howOld = 'je suis ${age >= 18 ? 'Majeur' : 'Mineur'}.';
+  print(howOld);
 }
