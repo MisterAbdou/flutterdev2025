@@ -4,6 +4,8 @@ void main(List<String> args) {
 
 void terrainDeJeuChainesDeCaractere() {
   basicStringDeclaration();
+  multiLineString();
+  concatenationTraditionnelle();
 }
 
 void basicStringDeclaration() {
@@ -20,4 +22,23 @@ void basicStringDeclaration() {
 
   final uneTroisiemePhrase = 'Des "quotes doubles" dans des quotes simples !';
   print(uneTroisiemePhrase);
+}
+
+//chaine de caractere multiligne
+void multiLineString() {
+  final abdouNdiaye = '''
+   bonjour tout le monde. je m'appelle Serigne Abdou ndiaye
+   actuellement etudiant en licence 3 informatique(si);
+   🎇🎇🧨✨🎊🎉🎉🎆 
+   ''';
+  print(abdouNdiaye);
+}
+
+//interploation de chaine de caracteres
+void concatenationTraditionnelle() {
+  final hello = "hello";
+  final world = "world !";
+  // l'operation + permet de faire la concatenation des chaines de caracteres
+  final chainesCombines = hello + ' ' + world;
+  print(chainesCombines);
 }
