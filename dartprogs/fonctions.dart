@@ -43,6 +43,15 @@ void optionalParameters() {
   fParametreNommes(nom: 'ndiaye');
   // parametres nom et salutations donnes dans l'orde inverse
   fParametreNommes(nom: 'Diop', salutation: "welcom to the party !");
+
+  // appel avec deux parametres nommes
+  print(suiteArythmetic(10, u0: 10, pas: 3));
+  // appel avec valeur par defaut sur les parametres optionnels
+  print(suiteArythmetic(10));
+
+  //appel avec un parametre positionnel et un parametre nomme
+  print(suiteArythmetic(10, u0: 10));
+  print(suiteArythmetic(10, pas: 3));
 }
 
 // fonction avec des parametres optionnels []
@@ -61,4 +70,14 @@ void fParametreNommes({String? salutation, String? nom}) {
   final vraiNom = nom ?? "Personne mystere";
 
   print('$vraiSalutation,$vraiNom');
+}
+
+// parametre n positionnel et obligatoire
+// parametre u0 et pas nommes optionnels avec valeurs par defaut
+int suiteArythmetic(int n, {int u0 = 1, int pas = 1}) {
+  if (n == 0) {
+    return u0;
+  } else {
+    return n + suiteArythmetic(u0: u0, n - 1, pas: pas);
+  }
 }
