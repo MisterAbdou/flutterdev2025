@@ -39,10 +39,20 @@ void forceWithAssertion() {
 
   // Possible car dart voit l'initialisation
   nombreImpaire = nombrePaire + 1;
-
+  print(nombreImpaire);
   // afffectation null
   nombrePaire = null; // possible car nombrePaire est nullable
 
   //force cette affectation qui va produire une erreur
   nombrePaire = nombrePaire! + 1;
+}
+
+void makeIncrement() {
+  int? sommeNumber;
+  inscreaseValue(sommeNumber);
+}
+
+void inscreaseValue(int? value) {
+  value = value ?? 0; // initialisation en cas de valeur nulle
+  print(value);
 }
