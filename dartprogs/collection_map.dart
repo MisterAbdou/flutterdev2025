@@ -16,6 +16,7 @@ void main(List<String> args) {
   superficieRegions.forEach((String key, int value) {
     print("${key.padRight(15)}--> $value");
   });
+  printEmployer();
 }
 
 void printEmployer() {
@@ -34,8 +35,26 @@ void printEmployer() {
     202: {"nom": "Aminata Sow", "service": "vente", "salaire": 4500000},
   };
 
-  print("_" * 85);
+  print("-" * 85);
   String headerline = "|" + "ID".padLeft(20) + "|";
 
-  employers[200].keys.foreach((element) {});
+  employers[200].keys.forEach((element) {
+    headerline += element.toString().padLeft(20) + "|";
+  });
+  print(headerline);
+  print("-" * 85);
+  employers.forEach((keyEmployer, dataEmployer) {
+    print(
+      "|${keyEmployer.toString().padLeft(20)}"
+      "|${dataEmployer['nom'].padLeft(20)}"
+      "|${dataEmployer['service'].padLeft(20)}"
+      "|${dataEmployer['salaire'].toString().padLeft(20)}",
+    );
+    print("-" * 85);
+  });
+
+  print(employers.containsKey(200));
+  //  lister toutes les cles
+  print(employers.keys);
+  // employers.clear()
 }
