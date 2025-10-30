@@ -24,7 +24,7 @@ class Note {
 }
 
 void main(List<String> args) {
-  // instalation d'un objet de la classe note avec des parametres nommes
+  // installation d'un objet de la classe note avec des parametres nommes
   // matiere et le parametre note par defaut 0
   Note note = new Note(matiere: "Algebre fondamental");
   //utilisateur d'un setter pour modifier le champ note
